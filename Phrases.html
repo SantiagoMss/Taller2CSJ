@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fases Celebres de Usuario</title>
+</head>
+<body>
+    <h1>Ingrese sus datos</h1>
+    <form action="enviar_email.php" method="post">
+        <label for="username">Nombre de Usuario:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="phrase1">Frase 1:</label>
+        <textarea id="phrase1" name="phrase1" rows="4" cols="50"></textarea><br><br>
+
+        <label for="phrase2">Frase 2:</label>
+        <textarea id="phrase2" name="phrase2" rows="4" cols="50"></textarea><br><br>
+
+        <label for="mainPhrase">Frase Principal:</label>
+        <select id="mainPhrase" name="mainPhrase">
+            <option value="phrase1">Frase 1</option>
+            <option value="phrase2">Frase 2</option>
+        </select><br><br>
+
+        <input type="submit" value="Enviar Email">
+    </form>
+    <br>
+    <button onclick="window.location.href='Primer Archivo.html'">Volver al Menú</button>
+</body>
+</html>

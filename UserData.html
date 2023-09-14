@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <h2>Rellena tu CV</h2>
+    <form action="submitform.php" method="post">
+        <label for="name">Nombre</label><br>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="lastname">Apellidos</label><br>
+        <input type="text" id="lastname" name="lastname" required><br>   
+
+        <label for="password">Contraseña:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="confirm_password">Confirme Contraseña</label><br>
+        <input type="password" id="confirm_password" name="confirm_password" required><br>
+
+        <label for="identificacion">Identificación</label><br>
+        <select id="identificacion" name="identificacion">
+            <option value="Tarjeta_Identidad">TI</option>
+            <option value="Numero_cedula">CC</option>
+            <option value="Pasaporte">Pasaporte</option>
+            <option value="otros">Otros</option>
+        </select>
+        <input type="text" id="numero_identificacion" name="numero_identificacion"><br><br>
+        <label>Sexo</label><br>
+        <input type="radio" id="hombre" name="sexo" value="hombre">
+        <label for="hombre">Hombre</label><br>
+        <input type="radio" id="mujer" name="sexo" value="mujer">
+        <label for="mujer">Mujer</label><br><br>
+
+        <label for="foto">Incluir mi foto</label><br>
+        <input type="file" id="foto" name="foto"> <br><br>        
+                          
+    </form>
+    <input type="checkbox" id="estudiante" name="estudiante" style="font-size: 24px; color: #008000;">
+    <label for="estudiante">Estudiante...</label><br><br>
+    <fieldset style="border: 2px solid black; padding: 10px;">
+        <legend>Datos Personales</legend>
+        <form action="procesar_datos.php" method="post">
+        <!-- Departamento -->
+        <label for="departamento">Departamento</label><br>
+        <select id="departamento" name="departamento">
+            <option value="Amazonas">Amazonas</option>
+            <option value="Antioquia">Antioquia</option>
+            <option value="Cundinamarca">Cundinamarca</option>
+            <option value="Valle del Cauca">Valle del Cauca</option>
+            <option value="Santander">Santander</option>
+        </select><br><br>
+        
+        <!-- Fecha de Nacimiento -->
+        <label for="fecha_nacimiento">Fecha de Nacimiento</label><br>
+
+        <!-- Día -->
+        <input type="text" id="dia" name="dia" placeholder="Día">
+        <span>de</span>
+           
+        <!-- Mes -->
+        <select id="mes" name="mes">
+            <option value="enero">Enero</option>
+            <option value="febrero">Febrero</option>
+            <option value="marzo">Marzo</option>
+            <option value="abril">Abril</option>
+            <option value="mayo">Mayo</option>
+            <option value="junio">Junio</option>
+            <option value="julio">Julio</option>
+            <option value="agosto">Agosto</option>
+            <option value="septiembre">Septiembre</option>
+            <option value="octubre">Octubre</option>
+            <option value="noviembre">Noviembre</option>
+            <option value="diciembre">Diciembre</option>
+            </select>
+            <span>de</span>
+            
+
+        <!-- Año -->
+        <input type="text" id="ano" name="ano" placeholder="Año"><br><br>
+        
+        <label for="temas_interes">Temas de Interés (Selecciona varios si quieres)</label><br>
+        <select id="temas_interes" name="temas_interes[]" multiple size="5">
+            <option value="admin_bd">Administración de Bases de Datos</option>
+    <option value="programacion">Programación</option>
+    <option value="desarrollo_web">Desarrollo Web</option>
+    <option value="redes">Redes de Computadoras</option>
+    <option value="inteligencia_artificial">Inteligencia Artificial</option>
+    <option value="ciencia_datos">Ciencia de Datos</option>
+    <option value="seguridad_informatica">Seguridad Informática</option>
+    <option value="diseño_grafico">Diseño Gráfico</option>
+    <option value="marketing_digital">Marketing Digital</option>
+
+        
+        </select>
+    </fieldset><br>
+    <input type="submit" value="Guardar Cambios">
+    
+    <!-- Botón Borrar Datos Introducidos -->
+    <input type="reset" value="Borrar Datos Introducidos">
+        
+      
+    </form>
+    <br>
+    <br>
+    <button onclick="window.location.href='Primer Archivo.html'">Volver al Menú</button>
+
+
+
+</body>
+</html>
